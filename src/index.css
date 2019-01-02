@@ -22,7 +22,7 @@ h1 {
 }
 
 #main-container {
-    height: 82vh;
+    height: 622px;
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
@@ -93,7 +93,6 @@ h1 {
 #input {
     grid-area: 2 / 2;
     background-color: #bbb;
-    /* padding: 0.5rem; */
 }
 
 #input-container {
@@ -105,8 +104,17 @@ h1 {
 }
 
 input[type=text] {
-    padding: .2rem;
+    padding: 0.2rem;
     font-size: 1rem;
     text-align: center;
     width: 95%;
+}
+
+button {
+    font-size: 1rem;
+    background-color: #444;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border: none;
+    border-radius: 0.2rem;
 }

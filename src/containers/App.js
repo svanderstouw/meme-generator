@@ -10,7 +10,7 @@ class App extends Component {
         const topText = ''
         const bottomText = ''
 
-        this.state = { image: images[0], images, topText, bottomText }
+        this.state = { image: './images/default.jpg', images, topText, bottomText }
     }
 
     selectImage = event => {
@@ -39,7 +39,7 @@ class App extends Component {
         return (
             <div>
                 <header>
-                    <h1>Meme Generator</h1>
+                    <h1>Dog Meme Generator</h1>
                 </header>
 
                 <MemeGenerator
