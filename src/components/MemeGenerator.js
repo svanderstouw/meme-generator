@@ -22,7 +22,7 @@ const MemeGenerator = (props) => (
             <InputPanel
                 setTopText={props.setTopText}
                 setBottomText={props.setBottomText}
-
+                saveImage={props.saveImage}
             />
         </div>
     </div>

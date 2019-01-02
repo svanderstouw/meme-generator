@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import domtoimage from 'dom-to-image-more'
 import '../index.css'
 import MemeGenerator from '../components/MemeGenerator'
 
@@ -24,6 +25,16 @@ class App extends Component {
         this.setState({ bottomText: event.target.value })
     }
 
+    saveImage = () => {
+        domtoimage.toJpeg(document.getElementById('preview-container'), { quality: 0.95})
+        .then(function (dataUrl) {
+            var link = document.createElement('a')
+            link.download = 'meme.jpg'
+            link.href = dataUrl
+            link.click()
+        })
+    }
+
     render() {
         return (
             <div>
@@ -39,6 +50,7 @@ class App extends Component {
                     selectImage={this.selectImage}
                     setTopText={this.setTopText}
                     setBottomText={this.setBottomText}
+                    saveImage={this.saveImage}
                 />
             </div>
         )
